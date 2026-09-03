@@ -1,0 +1,29 @@
+{
+ "BAH": {
+  "dist": 2.105,
+  "nn": "CEK",
+  "n_rows": 1266,
+  "resid_transfer": 0.02172279699597734,
+  "resid_oracle": 0.33809461606662483,
+  "fc_baseline": 0.20463914771764086,
+  "fc_transfer": 0.14640750634980615
+ },
+ "CEK": {
+  "dist": 1.609,
+  "nn": "CGD",
+  "n_rows": 1275,
+  "resid_transfer": -0.037398194153577674,
+  "resid_oracle": 0.3965404661746641,
+  "fc_baseline": 0.1518440073903876,
+  "fc_transfer": 0.12000117214878561
+ },
+ "CGD": {
+  "dist": 1.609,
+  "nn": "CEK",
+  "n_rows": 1248,
+  "resid_transfer": -0.052335938034801494,
+  "resid_oracle": 0.33123647180870314,
+  "fc_baseline": 0.23807584661074344,
+  "fc_transfer": 0.12566097965300274
+ }
+}

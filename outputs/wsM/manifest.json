@@ -1,0 +1,132 @@
+{
+ "ridge": {
+  "seconds": 1.4832592010498047,
+  "total_seconds": 1.4912304878234863,
+  "train_rows": 5920,
+  "compliance": "train-only fit; FrozenStats=train split; Y_te untouched"
+ },
+ "wsB": {
+  "seeds": [
+   0,
+   1,
+   2
+  ],
+  "delta_rows": 5066,
+  "dropped_no_train_control": 12,
+  "total_seconds": 46.95641040802002,
+  "train_rows": 5920,
+  "compliance": "train-only fit; FrozenStats=train split; Y_te untouched"
+ },
+ "wsF": {
+  "seeds": [
+   0,
+   1,
+   2
+  ],
+  "cfg": {
+   "hidden": [
+    1024,
+    2048,
+    2048,
+    2048,
+    2048
+   ],
+   "epochs": 300,
+   "lr": 0.001,
+   "wd": 0.0001,
+   "emb_drop": 0.35,
+   "p_drop": 0.3,
+   "bs": 256,
+   "loss": "huber",
+   "inter_ctx": true,
+   "inter_strain": false,
+   "unk_unseen": true,
+   "aux_delta": 0.0,
+   "aux_terms": "fc,ctx,drug",
+   "strain_blind": false
+  },
+  "total_seconds": 373.7911767959595,
+  "train_rows": 5920,
+  "compliance": "train-only fit; FrozenStats=train split; Y_te untouched"
+ },
+ "wsA": {
+  "seeds": [
+   0,
+   1,
+   2,
+   3,
+   4
+  ],
+  "epochs": 100,
+  "total_seconds": 110.11625242233276,
+  "train_rows": 5920,
+  "compliance": "train-only fit; FrozenStats=train split; Y_te untouched"
+ },
+ "wsD": {
+  "seeds": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7
+  ],
+  "cfg": {
+   "hidden": [
+    1024,
+    2048,
+    2048,
+    2048,
+    2048
+   ],
+   "epochs": 300,
+   "lr": 0.001,
+   "wd": 0.0001,
+   "emb_drop": 0.35,
+   "p_drop": 0.3,
+   "bs": 256,
+   "chem_emb": 32,
+   "residual": false,
+   "lowrank": 0,
+   "loss": "huber",
+   "film": false,
+   "g2_aug": true
+  },
+  "total_seconds": 1375.98011302948,
+  "train_rows": 5920,
+  "compliance": "train-only fit; FrozenStats=train split; Y_te untouched"
+ },
+ "wsC": {
+  "recipes": [
+   {
+    "time_onehot": true,
+    "interact": "none"
+   },
+   {
+    "time_onehot": true,
+    "interact": "chemstrain"
+   },
+   {
+    "time_onehot": false,
+    "interact": "none"
+   }
+  ],
+  "seeds": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7
+  ],
+  "epochs": 150,
+  "n_models": 24,
+  "total_seconds": 948.1383697986603,
+  "train_rows": 5920,
+  "compliance": "train-only fit; FrozenStats=train split; Y_te untouched"
+ }
+}

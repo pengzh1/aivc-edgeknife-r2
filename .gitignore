@@ -1,0 +1,52 @@
+# ================= 环境与构建 =================
+.venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.vscode/
+.idea/
+*.egg-info/
+
+# ================= 官方数据（合规：不得外传） =================
+input/
+data.zip
+goai1_bundle_20260806.tar.zst
+
+# ================= 外部数据与模型权重（大二进制；来源与校验和见
+#      vc_repro/external_data/source_manifest.json） =================
+extref/
+cache/
+!extref/anubis_dryad_downloader.py
+outref/*.m4s
+outref/*.wav
+outref/*.mp4
+outref/*.pdf
+
+# ================= 产物大二进制（保留报告/分数等小文件备查） =================
+outputs/**/*.npy
+outputs/**/*.npz
+outputs/**/*.csv
+outputs/**/*.joblib
+outputs/**/*.log
+outputs/**/cache/
+outputs/wsK/
+outputs/.repro_state/
+analysis/**/*.csv
+analysis/**/*.tsv
+analysis/cache_moa/
+analysis/crd_variants/*.tsv
+
+# ================= 提交物大压缩包（保留文档与小件） =================
+*.zip
+dist/*
+!dist/*.md
+!dist/*.docx
+!dist/*.pdf
+
+# ================= 系统杂物 =================
+Thumbs.db
+.DS_Store
+$RECYCLE.BIN/
+netdisk_upload.log
+verify_backup/
+dist_submit/

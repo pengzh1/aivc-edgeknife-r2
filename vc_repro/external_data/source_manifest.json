@@ -1,0 +1,71 @@
+{
+  "manifest_version": "1.0",
+  "project": "AIVC-edgeknife-r2",
+  "compiled": "2026-08-29",
+  "note": "最终模型实际使用的外部输入；探索阶段下载评估但未入模的数据见报告披露附录。所有条目均公开可获取，sha256 为本机实际使用文件的校验和（前 16 位）。",
+
+  "used": [
+    {
+      "id": "pubchem_smiles",
+      "name": "PubChem compound structures (PUG-REST)",
+      "role": "54 个竞赛化合物的 Canonical SMILES（化合物结构描述符与分子表征的输入）",
+      "source": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/{CID}/property/CanonicalSMILES/JSON",
+      "version": "live API, CID 冻结于 entity_mapping.csv",
+      "license": "PubChem data are freely available (public domain / CC0-equivalent, see licenses/PubChem.txt)",
+      "download_date": "2026-08（复赛包构建时按冻结 CID 复拉）",
+      "local_artifacts": {
+        "outputs/wsA/smiles.csv": {"sha256_16": "9cf4bc8b7fcfe155", "bytes": 4738},
+        "outputs/wsA/compound_cids.json": {"sha256_16": "bb4c733600247572", "bytes": 1397}
+      },
+      "rebuild": "vc_repro/scripts/build_embeddings.py"
+    },
+    {
+      "id": "rdkit",
+      "name": "RDKit",
+      "role": "化合物结构描述符与 Morgan 指纹生成（软件依赖，非数据）",
+      "source": "https://www.rdkit.org/",
+      "version": "2026.3.5",
+      "license": "BSD-3-Clause (vc_repro/LICENSES/RDKit.txt)"
+    },
+    {
+      "id": "chemberta_mlm",
+      "name": "ChemBERTa-77M-MLM",
+      "role": "化合物 SMILES 的预训练语言模型 embedding（融合分子表征族输入）",
+      "source": "https://huggingface.co/DeepChem/ChemBERTa-77M-MLM",
+      "version": "revision 见 cache/chemberta/config.json；权重 pytorch_model.bin",
+      "license": "MIT (vc_repro/LICENSES/ChemBERTa.txt)",
+      "local_artifacts": {
+        "cache/chemberta/pytorch_model.bin": {"sha256_16": "95571af26b61ba8d", "bytes": 13734116}
+      },
+      "rebuild": "随包化合物 embedding 缓存（outputs/wsN6/chem_features_fuse_full.csv, sha256_16=ee7dfc8c360f30f9）已可用；重建路径见 build_embeddings.py"
+    },
+    {
+      "id": "molformer_xl",
+      "name": "MoLFormer-XL-both-10pct",
+      "role": "化合物 SMILES 的预训练语言模型 embedding（fuse3 三源融合族输入）",
+      "source": "https://huggingface.co/IBM/ibm/MoLFormer-XL-both-10pct",
+      "version": "model.safetensors（trust_remote_code 补丁文件随 cache/molformer/）",
+      "license": "Apache-2.0 (vc_repro/LICENSES/MoLFormer.txt)",
+      "local_artifacts": {
+        "cache/molformer/model.safetensors": {"sha256_16": "0795977fe7192c4a", "bytes": 187248784}
+      },
+      "rebuild": "随包化合物 embedding 缓存（outputs/wsN23/chem_features_fuse3_full.csv, sha256_16=e7bd4fcda1332274）已可用；重建需下载权重"
+    }
+  ],
+
+  "embedding_caches_shipped": {
+    "outputs/wsA/chem_features_full.csv": {"sha256_16": "a6147b8956329de7", "desc": "RDKit 描述符 PCA64（基=train 37 化合物）"},
+    "outputs/wsN6/chem_features_fuse_full.csv": {"sha256_16": "ee7dfc8c360f30f9", "desc": "RDKit⊕ChemBERTa PCA64"},
+    "outputs/wsN23/chem_features_fuse3_full.csv": {"sha256_16": "e7bd4fcda1332274", "desc": "三源(RDKit⊕ChemBERTa⊕MoLFormer) PCA64"}
+  },
+
+  "evaluated_not_used": [
+    "Hoepfner 2014 HOP 化学基因组筛选 z 分数（Dryad）——下载评估，未入最终模型",
+    "Hillenmeyer 2008 同族数据——下载评估，未入模",
+    "STITCH v5 4932 蛋白-化合物关联——下载评估，未入模",
+    "SGD phenotype_data.tab——下载评估，未入模",
+    "Peter et al. 2018 (1011 酵母基因组) gVCF/距离/表型矩阵——下载评估，未入模",
+    "DNABERT-2-117M / NT-v2-500m 权重——下载评估，未入模",
+    "Messner et al. 2023 酵母 KO 蛋白组（Mendeley 10.17632/w8jtmnszd9, CC-BY 4.0）——下载评估（先验特征闸口与多任务预训练两役），未入模"
+  ]
+}

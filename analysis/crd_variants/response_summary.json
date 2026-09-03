@@ -1,0 +1,11 @@
+{
+  "n_treat_rows": 7884,
+  "n_no_control_match": 0,
+  "cgd_treat_rows": 1553,
+  "cgd_compounds": 43,
+  "n_pair_records": 3569162,
+  "strain_diff_abs_median": 0.17398460706075003,
+  "strain_diff_abs_q90": 0.6095237731933594,
+  "strain_diff_abs_q99": 1.5146597862243676,
+  "n_proteins": 5243
+}

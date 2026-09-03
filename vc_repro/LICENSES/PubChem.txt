@@ -1,0 +1,15 @@
+PubChem 数据使用说明与许可
+
+本作品使用 PubChem PUG-REST 接口获取 54 个竞赛化合物的 Canonical SMILES
+（CID 冻结于 vc_repro/external_data/entity_mapping.csv）。
+
+PubChem 数据可自由获取与使用（public domain / CC0 等价精神）：
+  "PubChem data are freely available for use ..."
+  官方说明：https://pubchem.ncbi.nlm.nih.gov/docs/disclaimer
+  检索接口：https://pubchem.ncbi.nlm.nih.gov/rest/pug
+
+引用建议：
+  Kim S, Chen J, Cheng T, et al. PubChem 2023 update.
+  Nucleic Acids Res. 2023, 51(D1): D1373–D1380.
+
+获取时间：2026-08（复现包构建时按冻结 CID 复拉，见 build_embeddings.py）。

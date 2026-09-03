@@ -1,0 +1,50 @@
+{
+  "package": "AIVC-edgeknife-r2",
+  "generated": "2026-08-29",
+  "config": {
+    "file": "vc_repro/configs/final.yaml",
+    "sha256_16": "b26addd777b6d9d8",
+    "note": "sha256 前 16 位；全文 b26addd777b6d9d8aba3beaa7cbe6a9c0275542f530de4fbd023ceaf33b83929"
+  },
+  "code_version": "release tag r2-submit（GitHub 仓库 pengzh1/goai-virtual-cell）",
+  "compliance_guard": {
+    "env": "GOAI_NO_TEST_GT=1",
+    "mechanism": "vc_repro/scripts/_driver.py 对全部阶段注入该环境变量；src/data.py 在守卫下对 test 蛋白矩阵只构造全 NaN 占位壳（数值零读取、文件可缺席），test 行序取自官方 test metadata",
+    "bit_level_proof": "在 test 蛋白文件与缓存同时隐藏的重跑中，predict.py 再生的 prediction_wst2_final_keepcols.csv 与随包提交件 SHA256 完全一致（1bca6905…7e3a）"
+  },
+  "commands": [
+    "python vc_repro/scripts/build_embeddings.py",
+    "python vc_repro/scripts/train.py",
+    "python vc_repro/scripts/predict.py"
+  ],
+  "final_prediction": {
+    "file": "outputs/wsT2/prediction_wst2_final_keepcols.csv",
+    "sha256": "1bca69053769bacb4d7a6cf695b46d5ec7a01d918c3194224389af7056927e3a",
+    "rows": 4454,
+    "cols": 4423,
+    "scale": "log2",
+    "independent_validation": "PASS (7/7, vc_repro/scripts/validate_submission.py)"
+  },
+  "expected_runtime": {
+    "hardware": "RTX 3070 8GB 级 GPU + 32GB RAM",
+    "build_embeddings_minutes": 10,
+    "train_hours": 5,
+    "predict_minutes": 10,
+    "note": "train 支持 .state 断点续跑；仅收尾两阶段可 CPU 跑通"
+  },
+  "val_reference": {
+    "composite": 0.5529,
+    "dep_f1_mean": 0.2549,
+    "split": "本地四划分（val 仅模型选择）",
+    "note": "τ=0.25 冻结档；对照 C1 τ=0.35 为 0.5541/0.2442"
+  },
+  "excluded_from_package": [
+    "input/（官方数据，主办方提供）",
+    "outputs/（复现产物，由主命令重新生成；推理侧关键小件的认证副本在 vc_repro/artifacts/）",
+    "outputs/.repro_state/（本机续跑标记，随 outputs 排除）",
+    "extref/（探索性外部数据，未入模）",
+    "cache/ 大权重（manifest 提供 URL+SHA256；化合物 embedding 缓存副本在 vc_repro/artifacts/embeddings/）",
+    "dist/、docs/ 过程稿"
+  ],
+  "checkpoints_policy": "最终模型的全部 checkpoint 由 train.py 一条命令从头重建（主办方复现路径即从头训练）；推理侧冻结小件（路由权重/DEP 分类器/契约/embedding 缓存）以认证副本随包（vc_repro/artifacts/，SHA256 见 ARTIFACTS_MANIFEST.json）。各族大体积 checkpoint（数十 GB）不随包，如评审需要可提供下载链接。"
+}

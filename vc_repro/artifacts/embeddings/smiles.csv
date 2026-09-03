@@ -1,0 +1,55 @@
+compound,query,smiles
+"(1R, 2S, 5R) - (-) - Menthol",(-)-menthol,CC1CCC(C(C1)O)C(C)C
+(S)-(+)-Camptothecin,(S)-(+)-camptothecin,CCC1(C2=C(COC1=O)C(=O)N3CC4=CC5=CC=CC=C5N=C4C3=C2)O
+1-10 Phenanthroline monohydrate,"1,10-phenanthroline",C1=CC2=C(C3=C(C=CC=N3)C=C2)N=C1
+4-Hydroxytamoxifen,4-Hydroxytamoxifen,CCC(=C(C1=CC=C(C=C1)O)C2=CC=C(C=C2)OCCN(C)C)C3=CC=CC=C3
+Abietic acid,Abietic acid,CC(C)C1=CC2=CCC3C(C2CC1)(CCCC3(C)C(=O)O)C
+Amiodarone hydrochloride,amiodarone hydrochloride,CCCCC1=C(C2=CC=CC=C2O1)C(=O)C3=CC(=C(C(=C3)I)OCCN(CC)CC)I.Cl
+Amphotericin B,Amphotericin B,CC1C=CC=CC=CC=CC=CC=CC=CC(CC2C(C(CC(O2)(CC(CC(C(CCC(CC(CC(=O)OC(C(C1O)C)C)O)O)O)O)O)O)O)C(=O)O)OC3C(C(C(C(O3)C)O)N)O
+Anisomycin,Anisomycin,CC(=O)OC1C(CNC1CC2=CC=C(C=C2)OC)O
+Artemisinin,Artemisinin,CC1CCC2C(C(=O)OC3C24C1CCC(O3)(OO4)C)C
+Brefeldin A,Brefeldin A,CC1CCCC=CC2CC(CC2C(C=CC(=O)O1)O)O
+CHX,cycloheximide,CC1CC(C(=O)C(C1)C(CC2CC(=O)NC(=O)C2)O)C
+Cisplatin,Cisplatin,N.N.Cl[Pt]Cl
+Clomiphene citrate,clomiphene citrate,CCN(CC)CCOC1=CC=C(C=C1)C(=C(C2=CC=CC=C2)Cl)C3=CC=CC=C3.C(C(=O)O)C(CC(=O)O)(C(=O)O)O
+Clotrimazole,Clotrimazole,C1=CC=C(C=C1)C(C2=CC=CC=C2)(C3=CC=CC=C3Cl)N4C=CN=C4
+Cyclopiazonic acid,Cyclopiazonic acid,CC(=O)C1=C(C2C3C(CC4=C5C3=CNC5=CC=C4)C(N2C1=O)(C)C)O
+Desipramine hydrochloride,desipramine hydrochloride,CNCCCN1C2=CC=CC=C2CCC3=CC=CC=C31.Cl
+Doxycycline hyclate,doxycycline hyclate,CCO.CC1C2C(C3C(C(=O)C(=C(C3(C(=O)C2=C(C4=C1C=CC=C4O)O)O)O)C(=O)N)N(C)C)O.CC1C2C(C3C(C(=O)C(=C(C3(C(=O)C2=C(C4=C1C=CC=C4O)O)O)O)C(=O)N)N(C)C)O.O.Cl.Cl
+Dyclonine hydrochloride,dyclonine hydrochloride,CCCCOC1=CC=C(C=C1)C(=O)CCN2CCCCC2.Cl
+EDTA,EDTA,C(CN(CC(=O)O)CC(=O)O)N(CC(=O)O)CC(=O)O
+Emodin,Emodin,CC1=CC2=C(C(=C1)O)C(=O)C3=C(C2=O)C=C(C=C3O)O
+FCCP,FCCP,C1=CC(=CC=C1NN=C(C#N)C#N)OC(F)(F)F
+Fluconazole,Fluconazole,C1=CC(=C(C=C1F)F)C(CN2C=NC=N2)(CN3C=NC=N3)O
+G418,G418,CC(C1C(C(C(C(O1)OC2C(CC(C(C2O)OC3C(C(C(CO3)(C)O)NC)O)N)N)N)O)O)O
+Geldanamycin,Geldanamycin,CC1CC(C(C(C=C(C(C(C=CC=C(C(=O)NC2=CC(=O)C(=C(C1)C2=O)OC)C)OC)OC(=O)N)C)C)O)OC
+H2O2,hydrogen peroxide,OO
+Haloperidol,Haloperidol,C1CN(CCC1(C2=CC=C(C=C2)Cl)O)CCCC(=O)C3=CC=C(C=C3)F
+Harmine hydrochloride,harmine hydrochloride,CC1=NC=CC2=C1NC3=C2C=CC(=C3)OC.Cl
+Hoechst 33258,Hoechst 33258,CN1CCN(CC1)C2=CC3=C(C=C2)N=C(N3)C4=CC5=C(C=C4)N=C(N5)C6=CC=C(C=C6)O
+Hydroxyurea,Hydroxyurea,C(=O)(N)NO
+Hygromycin B,Hygromycin B,CNC1CC(C(C(C1O)OC2C3C(C(C(O2)CO)O)OC4(O3)C(C(C(C(O4)C(CO)N)O)O)O)O)N
+LY 294002 hydrochloride,LY294002,C1COCCN1C2=CC(=O)C3=C(O2)C(=CC=C3)C4=CC=CC=C4
+MMS,methyl methanesulfonate,COS(=O)(=O)C
+NaCl,sodium chloride,[Na+].[Cl-]
+Neomycin B,neomycin B,C1C(C(C(C(C1N)OC2C(C(C(C(O2)CN)O)O)N)OC3C(C(C(O3)CO)OC4C(C(C(C(O4)CN)O)O)N)O)O)N
+Nigericin,nigericin,CC1CCC(OC1C(C)C(=O)O)CC2CC(C(C3(O2)C(CC(O3)(C)C4CCC(O4)(C)C5C(CC(O5)C6C(CC(C(O6)(CO)O)C)C)C)C)C)OC
+Nocodazole,nocodazole,COC(=O)NC1=NC2=C(N1)C=C(C=C2)C(=O)C3=CC=CS3
+Nystatin dihydrate,nystatin,CC1C=CC=CCCC=CC=CC=CC=CC(CC2C(C(CC(O2)(CC(C(CCC(CC(CC(CC(=O)OC(C(C1O)C)C)O)O)O)O)O)O)O)C(=O)O)OC3C(C(C(C(O3)C)O)N)O
+Oligomycin,oligomycin A,CCC1CCC2C(C(C(C3(O2)CCC(C(O3)CC(C)O)C)C)OC(=O)C=CC(C(C(C(=O)C(C(C(C(=O)C(C(C(CC=CC=C1)C)O)(C)O)C)O)C)C)O)C)C
+Parthenolide,Parthenolide,CC1=CCCC2(C(O2)C3C(CC1)C(=C)C(=O)O3)C
+Pentamidine isethionate,pentamidine isethionate,C1=CC(=CC=C1C(=N)N)OCCCCCOC2=CC=C(C=C2)C(=N)N.C(CS(=O)(=O)O)O.C(CS(=O)(=O)O)O
+Plumbagin,plumbagin,CC1=CC(=O)C2=C(C1=O)C=CC=C2O
+Raloxifene hydrochloride,raloxifene hydrochloride,C1CCN(CC1)CCOC2=CC=C(C=C2)C(=O)C3=C(SC4=C3C=CC(=C4)O)C5=CC=C(C=C5)O.Cl
+Rapamycin,rapamycin,CC1CCC2CC(C(=CC=CC=CC(CC(C(=O)C(C(C(=CC(C(=O)CC(OC(=O)C3CCCCN3C(=O)C(=O)C1(O2)O)C(C)CC4CCC(C(C4)OC)O)C)C)O)OC)C)C)C)OC
+SDS,sodium dodecyl sulfate,CCCCCCCCCCCCOS(=O)(=O)[O-].[Na+]
+Sorbitol,sorbitol,C(C(C(C(C(CO)O)O)O)O)O
+Staurosporine,staurosporine,CC12C(C(CC(O1)N3C4=CC=CC=C4C5=C6C(=C7C8=CC=CC=C8N2C7=C53)CNC6=O)NC)OC
+Sulfometuron methyl,sulfometuron methyl,CC1=CC(=NC(=N1)NC(=O)NS(=O)(=O)C2=CC=CC=C2C(=O)OC)C
+Tamoxifen,tamoxifen,CCC(=C(C1=CC=CC=C1)C2=CC=C(C=C2)OCCN(C)C)C3=CC=CC=C3
+Trichostatin A,trichostatin A,CC(C=C(C)C=CC(=O)NO)C(=O)C1=CC=C(C=C1)N(C)C
+Trifluoperazine dihydrochloride,trifluoperazine dihydrochloride,CN1CCN(CC1)CCCN2C3=CC=CC=C3SC4=C2C=C(C=C4)C(F)(F)F.Cl.Cl
+Tunicamycin,tunicamycin A (CID 11104835),CC(C)CCCCCCCCC/C=C/C(=O)N[C@@H]1[C@H]([C@H]([C@H](O[C@H]1O[C@@H]2[C@@H]([C@H]([C@@H]([C@H](O2)CO)O)O)NC(=O)C)C[C@H]([C@@H]3[C@H]([C@H]([C@@H](O3)N4C=CC(=O)NC4=O)O)O)O)O)O
+U-73122,U-73122,CC12CCC3C(C1CCC2NCCCCCCN4C(=O)C=CC4=O)CCC5=C3C=CC(=C5)OC
+Valinomycin,valinomycin,CC1C(=O)NC(C(=O)OC(C(=O)NC(C(=O)OC(C(=O)NC(C(=O)OC(C(=O)NC(C(=O)OC(C(=O)NC(C(=O)OC(C(=O)NC(C(=O)O1)C(C)C)C(C)C)C(C)C)C)C(C)C)C(C)C)C(C)C)C)C(C)C)C(C)C)C(C)C
+Wortmannin,wortmannin,CC(=O)OC1CC2(C(CCC2=O)C3=C1C4(C(OC(=O)C5=COC(=C54)C3=O)COC)C)C

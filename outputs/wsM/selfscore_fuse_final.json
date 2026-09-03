@@ -1,0 +1,67 @@
+{
+ "keep_n": 4422,
+ "splits": [
+  "test_chem_only",
+  "test_strain_only",
+  "test_both",
+  "test_time"
+ ],
+ "note": "官方口径自评（log2、非缺失∩keep、test 真实对照）；仅供自评参考，不作最终排名依据；本报告不回馈建模。",
+ "results": {
+  "prediction_trainonly_fuse.csv": {
+   "per_split": {
+    "test_chem_only": {
+     "sample_PCC": 0.9936523640442699,
+     "sample_R2": 0.986288101724842,
+     "protein_PCC": 0.9238136156723136,
+     "fidelity": 0.9679180271471418,
+     "n_treat": 1640,
+     "n_ctrl_matched": 52,
+     "FC_PCC": 0.6066070428381226,
+     "resid_PCC": 0.6503930242114363,
+     "DEP_dir_acc": 0.9093274442842652,
+     "DEP_PCC": 0.771009574828635,
+     "DEP_F1": 0.3418467170411058
+    },
+    "test_strain_only": {
+     "sample_PCC": 0.9826834202384505,
+     "sample_R2": 0.9628322386106827,
+     "protein_PCC": 0.8280454876967858,
+     "fidelity": 0.924520382181973,
+     "n_treat": 1322,
+     "n_ctrl_matched": 1322,
+     "FC_PCC": 0.32484050905221395,
+     "resid_PCC": 0.3055529352648456,
+     "DEP_dir_acc": 0.8222905811133057,
+     "DEP_PCC": 0.6092499680053965,
+     "DEP_F1": 0.1932133473811565
+    },
+    "test_both": {
+     "sample_PCC": 0.9841704653170565,
+     "sample_R2": 0.9671213374432337,
+     "protein_PCC": 0.8518232070773586,
+     "fidelity": 0.9343716699458829,
+     "n_treat": 1129,
+     "n_ctrl_matched": 697,
+     "FC_PCC": 0.2580037540542855,
+     "DEP_dir_acc": 0.7907836831251743,
+     "DEP_PCC": 0.5586126223826684,
+     "DEP_F1": 0.1417258675364956
+    },
+    "test_time": {
+     "sample_PCC": 0.9942304005154776,
+     "sample_R2": 0.9870357664093727,
+     "protein_PCC": 0.9256609721510941,
+     "fidelity": 0.9689757130253148,
+     "n_treat": 135,
+     "n_ctrl_matched": 8,
+     "FC_PCC": 0.7373118630001848,
+     "DEP_dir_acc": 0.9742049691789685,
+     "DEP_PCC": 0.8856178220025199,
+     "DEP_F1": 0.40922116367754857
+    }
+   },
+   "composite": 0.587442843265418
+  }
+ }
+}

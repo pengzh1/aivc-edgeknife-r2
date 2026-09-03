@@ -1,0 +1,78 @@
+# ============================================================
+# AIVC-edgeknife-r2 复赛最终冻结配置
+# 虚拟细胞方向 · 算法赛题 · 2026-09-03 提交
+# 所有数值为冻结值；复现脚本只读取本文件，不接受命令行覆盖。
+# ============================================================
+
+package:
+  name: AIVC-edgeknife-r2
+  direction: 虚拟细胞（酵母扰动响应蛋白组预测）
+  prediction_scale: log2
+
+# ---- 官方数据（由主办方提供，不随包分发）----
+data:
+  metadata_trainval: "input/WAYB_WAYC_metadata_train_val(1).csv"
+  metadata_test: "input/WAYB_WAYC_metadata_test(1).csv"
+  proteome_trainval: "input/WAYB_WAYC_proteome_raw_train_val.csv"
+  # 注意：proteome_raw_test.csv 为测试真值，任何脚本不得读取；
+  # 此处仅登记文件名，供主办方评测侧使用。
+  proteome_test: "input/WAYB_WAYC_proteome_raw_test.csv"
+
+# ---- 数据契约（全部统计量拟合范围 = split_final==train）----
+contract:
+  protein_filter: "outputs/wsM/keep_proteins_train_miss80.csv"  # train 缺失率≥80% 过滤 → 4,422 蛋白
+  n_output_cols: 4422
+  frozen_stats: train_only          # FrozenStats：蛋白均值/方差/缺失率仅用 train 行
+  encoder_fit_rows: train_treated   # 类别词表仅 train 处理行（未见类别→UNK）
+  pca_basis: train_compounds        # 化合物描述符 PCA64 基：train 37 化合物
+  control_hat: train_controls       # 分层对照锚点：train 对照样本
+  selector_features_fit: train_only # C1 特征/统计量/分类器：train-only
+  crd_modulation_fit: train_only    # CRD 迁移调制：strict train Δ
+
+# ---- 集成（21 族分角色路由；成员清单与训练入口见 README 训练节）----
+ensemble:
+  router_output: "outputs/wsN11/grand_router.json"   # train.py 阶段⑫重新生成
+  shrink_r: 0.7            # 角色权重向全局锚点的收缩档（val 扫描+人工裁定，已披露）
+  merge_into:              # 无 test 版成员并入同族
+    wsG: wsD_s16
+    wsBg2: wsB
+    wsN7: wsD_s16
+  seed_base: 20260806
+
+# ---- DEP 高效应检出层（条目级分类器 + 加性推送）----
+dep_selector:
+  enabled: true
+  tau: 0.25                # 冻结阈值（对冲定价：默认档，见报告方法节）
+  min_push: 0.3            # |Δ̂| 低于此值不推送
+  push_to: 1.02            # 推送目标 |Δ̂|
+  features:                # 10 维，全部 train-only 可算
+    - absDE                # |Δ̂_ens|（路由集成 − 对照锚点）
+    - x_std                # 21 族预测跨族标准差
+    - x_std_w              # 加权跨族标准差
+    - prot_dep_rate        # 蛋白级 train DEP 率（加性平滑）
+    - prot_absq90          # 蛋白级 train |Δ| 90 分位
+    - absDE_rel            # |Δ̂|/蛋白响应尺度
+    - mu_ctx_abs           # train 冻结上下文均值幅度
+    - mu_drug_abs          # train 冻结药物均值幅度
+    - level                # 对照锚点命中层级
+    - pert_time            # 扰动时长（数值化）
+  oof_cv: group_kfold_5_by_sample   # τ 调定与性能估计的唯一依据
+  model: HistGradientBoostingClassifier(max_iter=300, lr=0.08, max_leaf=31,
+          min_samples_leaf=200, l2=1.0, pos_subsample=1:5)
+
+# ---- CRD←CGD 有界迁移 ----
+crd_transfer:
+  enabled: true
+  beta: 0.35               # 冻结（val BAI 代理无害性验证 + 机制报告支撑）
+  from: CGD
+  to: CRD
+
+# ---- 输出 ----
+output:
+  filename: prediction.csv
+  id_order: official_test_metadata   # sample_ID 集合与顺序 = 官方 test metadata
+  certify:
+    rows: 4454
+    cols_total: 4423                 # sample_ID + 4,422
+    finite: true
+    no_dup: true

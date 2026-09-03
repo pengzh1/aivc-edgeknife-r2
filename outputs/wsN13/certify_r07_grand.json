@@ -1,0 +1,10 @@
+{
+ "rows": true,
+ "id_order": true,
+ "finite": true,
+ "cols_keep": true,
+ "range": [
+  9.6520414352417,
+  35.36445617675781
+ ]
+}

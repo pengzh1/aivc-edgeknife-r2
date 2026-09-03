@@ -1,0 +1,24 @@
+{
+  "CGD": {
+    "in_called": 31061,
+    "in_total": 43465,
+    "out_called": 1641900,
+    "out_total": 1711401,
+    "in_hom_alt": 2762,
+    "own_lost_call_rate": 0.7146209593926147,
+    "genomewide_call_rate": 0.9593894125339415,
+    "own_lost_hom_alt_frac_of_called": 0.08892179904059754,
+    "n_lost_orfs": 281
+  },
+  "CRD": {
+    "in_called": 104,
+    "in_total": 626,
+    "out_called": 1720560,
+    "out_total": 1754240,
+    "in_hom_alt": 0,
+    "own_lost_call_rate": 0.16613418530351437,
+    "genomewide_call_rate": 0.9808008026267786,
+    "own_lost_hom_alt_frac_of_called": 0.0,
+    "n_lost_orfs": 12
+  }
+}

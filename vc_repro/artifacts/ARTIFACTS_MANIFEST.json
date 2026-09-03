@@ -1,0 +1,84 @@
+{
+ "package": "AIVC-edgeknife-r2",
+ "note": "随包冻结小件：推理侧关键 artifact 的认证副本（train.py 全链可再生成；此处供静态审查与一致性核对）",
+ "files": {
+  "router/grand_router.json": {
+   "sha256": "9d8b4ce074da907e445ed662f0cba5c27390724d761c0e16e0ed8e8e5e2d8bf9",
+   "bytes": 2648,
+   "role": "21 族分角色路由冻结权重（train.py 阶段⑫再生成）",
+   "regenerated_by": "outputs/wsN11/grand_router.json"
+  },
+  "dep_selector/hgb_full.joblib": {
+   "sha256": "eac6f0966ee4ac22c2e516a5eceb52e7bc64c5c23f33e26e1ff69957a9161bb7",
+   "bytes": 1100016,
+   "role": "DEP 条目级分类器终模（阶段⑰再生成）",
+   "regenerated_by": "outputs/wsT1/cache/hgb_full.joblib"
+  },
+  "dep_selector/prot_stats.npz": {
+   "sha256": "f7b8f2633d2e6a2975d65d256ccc2125fa17babd409d34a08c42bb4c4568c1bf",
+   "bytes": 42478,
+   "role": "蛋白级 train DEP 率/幅度分位（train-only）",
+   "regenerated_by": "outputs/wsT1/cache/prot_stats.npz"
+  },
+  "dep_selector/pt_med.json": {
+   "sha256": "4dfa6d35490d4cf7196fd40977cf8211f82121b70cdc3f54827818419d88791d",
+   "bytes": 16,
+   "role": "扰动时长数值化中位数（train-only）",
+   "regenerated_by": "outputs/wsT1/cache/pt_med.json"
+  },
+  "dep_selector/candidates.json": {
+   "sha256": "e010c4ceb0d7b0a3547b62ee789305e6065181c2ece92d6c79f55283c6e9c099",
+   "bytes": 702,
+   "role": "DEP 候选裁决记录（τ=0.25 冻结档来源）",
+   "regenerated_by": "outputs/wsT1/cache/candidates.json"
+  },
+  "dep_selector/tune_results.json": {
+   "sha256": "1016a2751036304981e7583f0d498c1ea2ff7b1d5b373749f14bfc24f3ac7ad4",
+   "bytes": 6831,
+   "role": "train OOF 调阈记录（副作用预算口径）",
+   "regenerated_by": "outputs/wsT1/cache/tune_results.json"
+  },
+  "dep_selector/arbitrate.json": {
+   "sha256": "542534b2b77009c4dd49a31a9677bbdaeb9af6927d9512471f95ea0aac409432",
+   "bytes": 7304,
+   "role": "裁决留档",
+   "regenerated_by": "outputs/wsT1/cache/arbitrate.json"
+  },
+  "contract/keep_proteins_train_miss80.csv": {
+   "sha256": "1c3537287a55a6337c73dcfb3c1cfc1b4bf92d664906c7e965c8ba0cbd746734",
+   "bytes": 113172,
+   "role": "4,422 蛋白特征契约（train 缺失率过滤）",
+   "regenerated_by": "outputs/wsM/keep_proteins_train_miss80.csv"
+  },
+  "embeddings/chem_features_full.csv": {
+   "sha256": "a6147b8956329de73bf12d44705d853107e71de44429d691b5ef1d7a2daac31b",
+   "bytes": 31665,
+   "role": "RDKit 描述符 PCA64（54 化合物）",
+   "regenerated_by": "outputs/wsA/chem_features_full.csv"
+  },
+  "embeddings/chem_features_fuse_full.csv": {
+   "sha256": "ee7dfc8c360f30f96d54bde1bede93fcf3686ecc73dd3db497c3d5e004e4fff2",
+   "bytes": 30771,
+   "role": "RDKit⊕ChemBERTa PCA64",
+   "regenerated_by": "outputs/wsN6/chem_features_fuse_full.csv"
+  },
+  "embeddings/chem_features_fuse3_full.csv": {
+   "sha256": "e7bd4fcda133227410c497149e2694f39646fb4824649f1a99fc15239d89f224",
+   "bytes": 30981,
+   "role": "RDKit⊕ChemBERTa⊕MoLFormer PCA64",
+   "regenerated_by": "outputs/wsN23/chem_features_fuse3_full.csv"
+  },
+  "embeddings/smiles.csv": {
+   "sha256": "9cf4bc8b7fcfe1558059453d15cbead3e8b816cd49a927ab44df605f770117c8",
+   "bytes": 4738,
+   "role": "54 化合物 Canonical SMILES（PubChem 冻结 CID）",
+   "regenerated_by": "outputs/wsA/smiles.csv"
+  },
+  "embeddings/compound_cids.json": {
+   "sha256": "bb4c7336002475728842c30933a0682a3a97400cdeaf0683d00844c3bf6f4a5a",
+   "bytes": 1397,
+   "role": "化合物→PubChem CID 冻结表",
+   "regenerated_by": "outputs/wsA/compound_cids.json"
+  }
+ }
+}

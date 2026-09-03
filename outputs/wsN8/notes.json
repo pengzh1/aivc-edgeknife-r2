@@ -1,0 +1,7 @@
+{
+ "beta": 0.5,
+ "val_delta": 0.0004953680789107073,
+ "val_hit_rows": 1333,
+ "test_hit_rows": 1322,
+ "discipline": "val 仅验证无害性；增益不可在 val/test 诚实验证；是否作最终提交由用户决策"
+}

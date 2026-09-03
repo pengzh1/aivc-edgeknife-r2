@@ -1,0 +1,6 @@
+{
+ "val_chem_only": 1.0,
+ "val_strain_only": 1.0,
+ "val_both": 1.0,
+ "val_time": 1.0
+}

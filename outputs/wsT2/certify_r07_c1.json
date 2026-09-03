@@ -1,0 +1,16 @@
+{
+ "rows": true,
+ "id_order": true,
+ "finite": true,
+ "cols_keep": true,
+ "range": [
+  9.708889961242676,
+  35.34733581542969
+ ],
+ "candidate": "C1",
+ "tau": 0.35,
+ "tau_low": 0.1,
+ "band_first": false,
+ "beta": 0.35,
+ "n_pushed": 361244
+}

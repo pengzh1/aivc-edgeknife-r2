@@ -1,0 +1,42 @@
+{
+  "n_genes_with_any_diff": 4883,
+  "n_genes_with_hq_func_diff": 3666,
+  "n_V_in_proteome": 3116,
+  "thr_R1_mean_abs_delta": 0.4567422822689417,
+  "thr_R2_sens_absmedian": 0.36683959960937496,
+  "enrichment": {
+    "V_func_hq_x_R1_cgd_active": {
+      "N": 4888,
+      "K": 489,
+      "n_V": 3116,
+      "overlap": 269,
+      "expected": 311.72749590834695,
+      "p_hypergeom": 0.9999885931937407
+    },
+    "V_func_hq_x_R2_strain_sensitive": {
+      "N": 4888,
+      "K": 477,
+      "n_V": 3116,
+      "overlap": 281,
+      "expected": 304.07774140752866,
+      "p_hypergeom": 0.9905858954600646
+    },
+    "V_any_x_R1_cgd_active": {
+      "N": 4888,
+      "K": 489,
+      "n_V": 4085,
+      "overlap": 369,
+      "expected": 408.6671440261866,
+      "p_hypergeom": 0.9999995835287672
+    },
+    "V_any_x_R2_strain_sensitive": {
+      "N": 4888,
+      "K": 477,
+      "n_V": 4085,
+      "overlap": 350,
+      "expected": 398.6385024549918,
+      "p_hypergeom": 0.9999999991789069
+    }
+  },
+  "n_top_candidates": 380
+}
